@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: medichat
+    plan: free
+    runtime: python
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app --worker-class sync --workers 1 --timeout 120"
+    envVars:
+      - key: OPENAI_API_KEY
+        value: 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

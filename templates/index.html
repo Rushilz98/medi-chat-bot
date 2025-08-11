@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MediChat - Professional Medical Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <h1><i class="fas fa-heartbeat"></i> MediChat Assistant <i class="fas fa-user-md"></i></h1>
+            <p>AI-powered medical information & professional symptom analysis</p>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            <div class="message bot">
+                <div class="message-header">
+                    <div class="message-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="message-title">MediChat Assistant</div>
+                </div>
+                
+                <strong>Welcome to MediChat</strong> - your professional medical information assistant.<br><br>
+                
+                I can help you with:
+                <ul style="padding-left: 18px; margin: 10px 0;">
+                    <li style="margin: 6px 0;">Symptom analysis and possible condition identification</li>
+                    <li style="margin: 6px 0;">General health information and guidance</li>
+                    <li style="margin: 6px 0;">Understanding medical terms and procedures</li>
+                </ul>
+                
+                <div class="medical-category">
+                    <i class="fas fa-stethoscope"></i> Try asking about symptoms
+                </div>
+                
+                <div class="symptom-list">
+                    <span class="symptom-tag">Headache & fever</span>
+                    <span class="symptom-tag">Cough & shortness of breath</span>
+                    <span class="symptom-tag">Skin rash & itching</span>
+                </div>
+            </div>
+            
+            <div class="suggestion-bubbles">
+                <div class="suggestion" onclick="useSuggestion('What conditions could cause headache and fever?')">
+                    <i class="fas fa-head-side-cough"></i> Headache & fever
+                </div>
+                <div class="suggestion" onclick="useSuggestion('What are common symptoms of allergies?')">
+                    <i class="fas fa-allergies"></i> Allergy symptoms
+                </div>
+                <div class="suggestion" onclick="useSuggestion('Explain symptoms of diabetes')">
+                    <i class="fas fa-syringe"></i> Diabetes symptoms
+                </div>
+                <div class="suggestion" onclick="useSuggestion('How can I tell if I have a cold or flu?')">
+                    <i class="fas fa-virus"></i> Cold vs flu
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <textarea 
+                id="user-input" 
+                placeholder="Describe your symptoms or ask a health question..." 
+                rows="1"
+                autocomplete="off"
+                aria-label="Type your message"></textarea>
+            <button id="send-btn" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i> <span>Send</span>
+            </button>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>Medical Disclaimer:</strong> MediChat provides informational support only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
